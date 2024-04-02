@@ -38,13 +38,22 @@
 </div>
 
 @code {
+    private Calc calculator = new Calc();
     private string currentInput = "";
     private double firstNumber = 0;
     private char? operation = null;
 
     private void AddInput(int number)
     {
+        if (currentInput == "0")
+        {
+            currentInput = number.ToString();
+        }
+        else
+        {
         currentInput += number.ToString();
+        }
+        
     }
 
     private void AddDecimalPoint()
@@ -57,15 +66,38 @@
 
     private void SetOperation(char op)
     {
-        // ošetřit, že číslo je číslo :) 
         firstNumber = double.Parse(currentInput, System.Globalization.CultureInfo.InvariantCulture);
+        calculator.AktualniVysledek = firstNumber;
         currentInput = "";
         operation = op;
     }
 
     private void CalculateResult()
     {
-        // TODO
+        double secondNumber = double.Parse(currentInput, System.Globalization.CultureInfo.InvariantCulture);
+        double vysledek = 0;
+        switch (operation)
+        {
+            case '+':
+                calculator.Secti(secondNumber);
+                break;
+            case '-':
+                calculator.Odecti(secondNumber);
+                break;
+            case '*':
+                calculator.Nasob(secondNumber);
+                break;
+            case '/':
+                calculator.Vydel(secondNumber);
+                break;
+            case '^':
+                calculator.Mocni(secondNumber);
+                break;
+  
+        }
+
+        currentInput = calculator.VratAktualniVysledek().ToString();
+
     }
 
     private void Clear()
