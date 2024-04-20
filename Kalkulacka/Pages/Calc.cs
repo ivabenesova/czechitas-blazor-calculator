@@ -33,12 +33,7 @@
 
         public void Mocni(double druheCislo)
         {
-            double VysledekMocneni = 1;
-            for (int i = 0; i < druheCislo; i++)
-            {
-                VysledekMocneni = VysledekMocneni * AktualniVysledek;
-            }
-            AktualniVysledek = VysledekMocneni;
+            AktualniVysledek = Math.Pow(AktualniVysledek,druheCislo);
         }
 
         public double VratAktualniVysledek()
