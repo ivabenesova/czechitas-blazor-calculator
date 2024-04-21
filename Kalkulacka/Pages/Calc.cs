@@ -7,7 +7,7 @@
 
         public bool JePlatnyOperator(string operace)
         {
-            List<string> operators = new List<string> { "+", "-", "*", "/", "^", "X" };
+            List<string> operators = new List<string> { "+", "-", "*", "/", "^","√", "X" };
             return operators.Contains(operace);
         }
 
@@ -28,12 +28,17 @@
 
         public void Vydel(double druheCislo)
         {
-            AktualniVysledek = Math.Round((AktualniVysledek / druheCislo), 2);
+            AktualniVysledek = Math.Round((AktualniVysledek / druheCislo), 5);
         }
 
         public void Mocni(double druheCislo)
         {
             AktualniVysledek = Math.Pow(AktualniVysledek,druheCislo);
+        }
+
+        public void Odmocni()
+        {
+            AktualniVysledek = Math.Round(Math.Sqrt(AktualniVysledek),5);
         }
 
         public double VratAktualniVysledek()

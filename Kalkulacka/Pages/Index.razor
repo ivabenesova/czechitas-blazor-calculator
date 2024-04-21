@@ -36,6 +36,8 @@
         <div class="keypad-row">
             <button @onclick="CalculateResult">=</button>
             <button @onclick="Clear">C</button>
+            <button @onclick="() => SetOperation('√')">√</button>
+
              
         </div>
     </div>
@@ -78,28 +80,35 @@
 
     private void CalculateResult()
     {
-        double secondNumber = double.Parse(currentInput, System.Globalization.CultureInfo.InvariantCulture);
-        double vysledek = 0;
+        double secondNumber;
+
         switch (operation)
         {
             case '+':
+                secondNumber = double.Parse(currentInput, System.Globalization.CultureInfo.InvariantCulture);
                 calculator.Secti(secondNumber);
                 break;
             case '-':
+                secondNumber = double.Parse(currentInput, System.Globalization.CultureInfo.InvariantCulture);
                 calculator.Odecti(secondNumber);
                 break;
             case '*':
+                secondNumber = double.Parse(currentInput, System.Globalization.CultureInfo.InvariantCulture);
                 calculator.Nasob(secondNumber);
                 break;
             case '/':
+                secondNumber = double.Parse(currentInput, System.Globalization.CultureInfo.InvariantCulture);
                 calculator.Vydel(secondNumber);
                 break;
             case '^':
+                secondNumber = double.Parse(currentInput, System.Globalization.CultureInfo.InvariantCulture);
                 calculator.Mocni(secondNumber);
+                break;
+            case '√':
+                calculator.Odmocni();
                 break;
             default:
                 break;
-  
         }
 
         currentInput = calculator.VratAktualniVysledek().ToString();
