@@ -44,7 +44,7 @@
         <div class="keypad-row">
             <button @onclick="CalculateResult">=</button>
             <button @onclick="Clear">C</button>
-            <button @onclick="() => SetOperation('√')">√</button>
+            <button @onclick="CalculateSqrt">√</button>
 
 
         </div>
@@ -112,15 +112,20 @@
                 secondNumber = double.Parse(currentInput, System.Globalization.CultureInfo.InvariantCulture);
                 calculator.Mocni(secondNumber);
                 break;
-            case '√':
-                calculator.Odmocni();
-                break;
+            
             default:
                 break;
         }
 
-        currentInput = calculator.VratAktualniVysledek().ToString();
+        
 
+    }
+
+    private void CalculateSqrt()
+    {
+        calculator.AktualniVysledek = double.Parse(currentInput, System.Globalization.CultureInfo.InvariantCulture);
+        calculator.Odmocni();
+        currentInput = calculator.VratAktualniVysledek().ToString();
     }
 
     private void Clear()
