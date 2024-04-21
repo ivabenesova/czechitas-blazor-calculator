@@ -2,8 +2,16 @@
 
 <PageTitle>Kalkulačka</PageTitle>
 
-<h1>Kalkulačka</h1>
-<p> Závěrečný projekt kurzu C# (Czechitas)</p>
+<style>
+    .center-text {
+        text-align: center;
+    }
+</style>
+
+<div class="center-text">
+    <h1>Kalkulačka</h1>
+    <p style="margin-bottom: 40px;">Závěrečný projekt kurzu C# (Czechitas)</p>
+</div>
 
 <div class="calculator">
     <div class="display">@currentInput</div>
@@ -29,16 +37,16 @@
         <div class="keypad-row">
             <button @onclick="() => AddInput(0)">0</button>
             <button @onclick="AddDecimalPoint">.</button>
-            <button @onclick="() => SetOperation('^')">^</button>  
+            <button @onclick="() => SetOperation('^')">^</button>
             <button @onclick="() => SetOperation('/')">/</button>
-       
+
         </div>
         <div class="keypad-row">
             <button @onclick="CalculateResult">=</button>
             <button @onclick="Clear">C</button>
             <button @onclick="() => SetOperation('√')">√</button>
 
-             
+
         </div>
     </div>
 </div>
@@ -57,7 +65,7 @@
         }
         else
         {
-        currentInput += number.ToString();
+            currentInput += number.ToString();
         }
 
     }
@@ -66,7 +74,7 @@
     {
         if (!currentInput.Contains("."))
         {
-        currentInput += ".";
+            currentInput += ".";
         }
     }
 
