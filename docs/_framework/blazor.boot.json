@@ -1,7 +1,7 @@
 {
   "entryAssembly": "Kalkulacka",
   "resources": {
-    "hash": "sha256-/0n+LxChLTPBSTnJqxDNGwQRXHd3CVzo6aHBq5f0V2c=",
+    "hash": "sha256-lrXVETw816W7VCeTPnhkpSakgNmOuMHHOX1PfZTqzvQ=",
     "runtime": {
       "dotnet.7.0.15.9ymlsxq4kw.js": "sha256-MHuxwxeVFybuBBTAWeZrvoStZpW+H4ThSaRcFvrfqXM=",
       "dotnet.timezones.blat": "sha256-aHk3Pm2JXopn6UPLJtovAqIdIk8GyIMzGm450cli9UE=",
@@ -11,7 +11,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "Kalkulacka.dll": "sha256-/vaZS6m7HbaTU96mrZ9gNTOd5aHK3F4l0whUR7XbtJ0=",
+      "Kalkulacka.dll": "sha256-ByJu4+MaVELbovhxE18+fr+Bkl14GzZNq8ogbxFJkhA=",
       "Microsoft.AspNetCore.Components.dll": "sha256-dX45fc5P86twEGo1J5AKd+UNUGTYKKZcaaHZcnshF38=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-tAdCxyVSnAlNhfdKXjWKQ/qhTo3lDH/sXEabW9RC+YQ=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-UPBgNO6zoeFGk8M6hM2WjwGz1qFRclpKV+FkqMLqGqk=",
