@@ -13,17 +13,17 @@
 
         public void Secti(double druheCislo)
         {
-            AktualniVysledek = AktualniVysledek + druheCislo;
+            AktualniVysledek = Math.Round(AktualniVysledek + druheCislo);
         }
 
         public void Odecti(double druheCislo)
         {
-            AktualniVysledek = AktualniVysledek - druheCislo;
+            AktualniVysledek = Math.Round(AktualniVysledek - druheCislo,5);
         }
 
         public void Nasob(double druheCislo)
         {
-            AktualniVysledek = AktualniVysledek * druheCislo;
+            AktualniVysledek = Math.Round(AktualniVysledek * druheCislo,5);
         }
 
         public void Vydel(double druheCislo)
@@ -33,7 +33,7 @@
 
         public void Mocni(double druheCislo)
         {
-            AktualniVysledek = Math.Pow(AktualniVysledek,druheCislo);
+            AktualniVysledek = Math.Round(Math.Pow(AktualniVysledek,druheCislo),5);
         }
 
         public void Odmocni()
