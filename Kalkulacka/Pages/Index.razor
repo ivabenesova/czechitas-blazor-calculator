@@ -79,10 +79,17 @@
 
     private void SetOperation(char op)
     {
+        if (op == '-' && currentInput == "")
+        {
+            currentInput = "-";
+        }
+        else 
+        {
         firstNumber = double.Parse(currentInput, System.Globalization.CultureInfo.InvariantCulture);
         calculator.AktualniVysledek = firstNumber;
         currentInput = "";
         operation = op;
+        }
     }
 
     private void CalculateResult()

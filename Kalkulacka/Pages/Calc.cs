@@ -13,7 +13,7 @@
 
         public void Secti(double druheCislo)
         {
-            AktualniVysledek = Math.Round(AktualniVysledek + druheCislo);
+            AktualniVysledek = Math.Round(AktualniVysledek + druheCislo,5);
         }
 
         public void Odecti(double druheCislo)
